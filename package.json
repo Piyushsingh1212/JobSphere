@@ -4,6 +4,6 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "build": "cd Frontend/vite-project && npm install && npm run build"
+    "build": "cd Frontend/vite-project && npm install && npm run build && rm -rf ../../dist && mv dist ../../dist"
   }
 }
