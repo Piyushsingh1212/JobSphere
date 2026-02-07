@@ -12,7 +12,7 @@ const useGetAllCompanies = () => {
     const fetchCompanies = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/v1/company/get",
+          "https://jobsphere-3-muax.onrender.com/api/v1/company/get",
           { withCredentials: true }
         );
 
