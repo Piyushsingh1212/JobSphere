@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { setCompanies } from "@/redux/companySlice";
+import { COMPANY_API_END_POINT } from "@/utils/constant";
 
 const useGetAllCompanies = () => {
   const dispatch = useDispatch();
@@ -11,10 +12,9 @@ const useGetAllCompanies = () => {
 
     const fetchCompanies = async () => {
       try {
-        const res = await axios.get(
-          "https://jobsphere-3-muax.onrender.com/api/v1/company/get",
-          { withCredentials: true }
-        );
+        const res = await axios.get(`${COMPANY_API_END_POINT}/get`, {
+          withCredentials: true,
+        });
 
         if (isMounted && res.data?.success) {
           dispatch(setCompanies(res.data.companies));
