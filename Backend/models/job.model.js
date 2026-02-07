@@ -1,7 +1,5 @@
-import mongoose, { trusted } from  "mongoose"
+import mongoose from "mongoose"
 console.log(mongoose.modelNames());
-
-import { Profiler } from "react"
 const jobSchema = new mongoose.Schema({
   title:{
     type:String,
@@ -52,4 +50,4 @@ const jobSchema = new mongoose.Schema({
   }
 ] 
 },{timestamps:true})
-export const Job = mongoose.model("Job",jobSchema);
+export const Job = mongoose.model("Job", jobSchema);
