@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: process.env.CLIENT_ORIGIN || "https://jobsphere-3-muax.onrender.com",
+    origin: process.env.CLIENT_ORIGIN || "https://jobsphere-5-frontend.onrender.com",
     credentials: true,
   })
 );
