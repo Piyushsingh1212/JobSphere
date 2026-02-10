@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 // CORS: allow only configured frontend origins. Use `CLIENT_ORIGINS` (comma-separated)
 // or `CLIENT_ORIGIN` for a single origin. If origin is allowed, reflect it.
-const rawOrigins = process.env.CLIENT_ORIGINS || process.env.CLIENT_ORIGIN || "https://jobsphere-5-frontend.onrender.com";
+const rawOrigins = process.env.CLIENT_ORIGINS || process.env.CLIENT_ORIGIN || "http://localhost:5173";
 const allowedOrigins = rawOrigins.split(",").map((s) => s.trim()).filter(Boolean);
 
 app.use(
