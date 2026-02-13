@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, "frontend", "dist")));
 // ✅ React Router Fix (NO app.get("*") anymore)
 app.use((req, res) => {
   res.sendFile(
-    path.join(__dirname, "frontend", "vite-project", "dist", "index.html")
+    path.join(__dirname, "Frontend", "vite-project", "dist", "index.html")
   );
 });
 
