@@ -10,9 +10,9 @@
 
     
     "dev": "nodemon Backend/index.js",
-    "build": "npm install && npm install --prefix Frontend/vite-project && npm run build --prefix Frontend/vite-project",
-    "start": "node Backend/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm install && npm install --include=dev --prefix Frontend/vite-project && npm run build --prefix Frontend/vite-project",
+    "frontend": "npm run dev --prefix Frontend/vite-project",
+    "start": "node Backend/index.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
